@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="johnnyCollege@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="johnnycollege">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sakila"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="world"/>
+    <table id="9" parent="2" name="city"/>
+    <table id="10" parent="2" name="college"/>
+    <table id="11" parent="2" name="collegelevel"/>
+    <table id="12" parent="2" name="collegetype"/>
+    <table id="13" parent="2" name="province"/>
+    <table id="14" parent="2" name="student"/>
+    <routine id="15" parent="2" name="addCollege">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="16" parent="2" name="addStudent">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="17" parent="9" name="CityID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="9" name="CityName">
+      <Position>2</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="9" name="InUser">
+      <Position>3</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;admin&apos;</DefaultExpression>
+    </column>
+    <column id="20" parent="9" name="InDate">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="21" parent="9" name="LastEditUser">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;admin&apos;</DefaultExpression>
+    </column>
+    <column id="22" parent="9" name="LastEditDate">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="23" parent="9" name="CityName">
+      <ColNames>CityName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="24" parent="9" name="City_CityID">
+      <ColNames>CityID</ColNames>
+    </index>
+    <key id="25" parent="9" name="PRIMARY">
+      <ColNames>CityID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="26" parent="9" name="CityName">
+      <ColNames>CityName</ColNames>
+      <UnderlyingIndexName>CityName</UnderlyingIndexName>
+    </key>
+    <column id="27" parent="10" name="CollegeID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="10" name="CollegeName">
+      <Position>2</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="10" name="collegeTypeID">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="10" name="collegeLevelID">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="10" name="InUser">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;admin&apos;</DefaultExpression>
+    </column>
+    <column id="32" parent="10" name="InDate">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="33" parent="10" name="LastEditUser">
+      <Position>7</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;admin&apos;</DefaultExpression>
+    </column>
+    <column id="34" parent="10" name="LastEditDate">
+      <Position>8</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="35" parent="10" name="CollegeName">
+      <ColNames>CollegeName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="36" parent="10" name="College_index_CollegeID">
+      <ColNames>CollegeID</ColNames>
+    </index>
+    <key id="37" parent="10" name="PRIMARY">
+      <ColNames>CollegeID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="38" parent="10" name="CollegeName">
+      <ColNames>CollegeName</ColNames>
+      <UnderlyingIndexName>CollegeName</UnderlyingIndexName>
+    </key>
+    <column id="39" parent="11" name="CollegeLevelID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="40" parent="11" name="CollegeLevelName">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="11" name="InUser">
+      <Position>3</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;admin&apos;</DefaultExpression>
+    </column>
+    <column id="42" parent="11" name="InDate">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="43" parent="11" name="LastEditUser">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;admin&apos;</DefaultExpression>
+    </column>
+    <column id="44" parent="11" name="LastEditDate">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="45" parent="11" name="CollegeLevelName">
+      <ColNames>CollegeLevelName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="46" parent="11" name="CollegeLevel_index_CollegeLevelID">
+      <ColNames>CollegeLevelID</ColNames>
+    </index>
+    <key id="47" parent="11" name="PRIMARY">
+      <ColNames>CollegeLevelID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="48" parent="11" name="CollegeLevelName">
+      <ColNames>CollegeLevelName</ColNames>
+      <UnderlyingIndexName>CollegeLevelName</UnderlyingIndexName>
+    </key>
+    <column id="49" parent="12" name="CollegeTypeID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="50" parent="12" name="CollegeTypeName">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="12" name="InUser">
+      <Position>3</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;admin&apos;</DefaultExpression>
+    </column>
+    <column id="52" parent="12" name="InDate">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="53" parent="12" name="LastEditUser">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;admin&apos;</DefaultExpression>
+    </column>
+    <column id="54" parent="12" name="LastEditDate">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="55" parent="12" name="CollegeTypeName">
+      <ColNames>CollegeTypeName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="56" parent="12" name="CollegeType_index_CollegeTypeID">
+      <ColNames>CollegeTypeID</ColNames>
+    </index>
+    <key id="57" parent="12" name="PRIMARY">
+      <ColNames>CollegeTypeID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="58" parent="12" name="CollegeTypeName">
+      <ColNames>CollegeTypeName</ColNames>
+      <UnderlyingIndexName>CollegeTypeName</UnderlyingIndexName>
+    </key>
+    <column id="59" parent="13" name="ProvinceID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="13" name="ProvinceName">
+      <Position>2</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="61" parent="13" name="InUser">
+      <Position>3</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;admin&apos;</DefaultExpression>
+    </column>
+    <column id="62" parent="13" name="InDate">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="63" parent="13" name="LastEditUser">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;admin&apos;</DefaultExpression>
+    </column>
+    <column id="64" parent="13" name="LastEditDate">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="65" parent="13" name="ProvinceName">
+      <ColNames>ProvinceName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="66" parent="13" name="PRIMARY">
+      <ColNames>ProvinceID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="67" parent="13" name="ProvinceName">
+      <ColNames>ProvinceName</ColNames>
+      <UnderlyingIndexName>ProvinceName</UnderlyingIndexName>
+    </key>
+    <column id="68" parent="14" name="StudentID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="69" parent="14" name="StudentName">
+      <Position>2</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="14" name="StudentSex">
+      <Position>3</Position>
+      <DataType>char(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="14" name="studentAge">
+      <Position>4</Position>
+      <DataType>varchar(3)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="72" parent="14" name="cellphoneBrand">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="73" parent="14" name="InUser">
+      <Position>6</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;yajing&apos;</DefaultExpression>
+    </column>
+    <column id="74" parent="14" name="InDate">
+      <Position>7</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="75" parent="14" name="LastEditUser">
+      <Position>8</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;yajing&apos;</DefaultExpression>
+    </column>
+    <column id="76" parent="14" name="LastEditDate">
+      <Position>9</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="77" parent="14" name="StudentName">
+      <ColNames>StudentName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="78" parent="14" name="student_index_StudentID">
+      <ColNames>StudentID</ColNames>
+    </index>
+    <key id="79" parent="14" name="PRIMARY">
+      <ColNames>StudentID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="80" parent="14" name="StudentName">
+      <ColNames>StudentName</ColNames>
+      <UnderlyingIndexName>StudentName</UnderlyingIndexName>
+    </key>
+    <argument id="81" parent="15" name="collegeID">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="82" parent="15" name="collegeName">
+      <DataType>varchar(15)|0</DataType>
+    </argument>
+    <argument id="83" parent="15" name="collegeTypeID">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="84" parent="15" name="collegeLevelID">
+      <DataType>int(11)|0</DataType>
+    </argument>
+    <argument id="85" parent="15" name="loginUser">
+      <DataType>varchar(15)|0</DataType>
+    </argument>
+    <argument id="86" parent="16" name="studentName">
+      <DataType>varchar(15)|0</DataType>
+    </argument>
+    <argument id="87" parent="16" name="studentSex">
+      <DataType>char(1)|0</DataType>
+    </argument>
+    <argument id="88" parent="16" name="studentAge">
+      <DataType>varchar(3)|0</DataType>
+    </argument>
+    <argument id="89" parent="16" name="cellphoneBrand">
+      <DataType>varchar(15)|0</DataType>
+    </argument>
+    <argument id="90" parent="16" name="loginUser">
+      <DataType>varchar(15)|0</DataType>
+    </argument>
+  </database-model>
+</dataSource>

@@ -1,0 +1,16 @@
+.border{
+	border: 1px solid blue;
+}
+
+a:link{
+	color: blue;
+}
+a:visited{
+	color: grey;
+}
+a:hover{
+	color: green;
+}
+a:active{
+	color: red;
+}
